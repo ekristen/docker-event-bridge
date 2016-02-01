@@ -22,3 +22,7 @@ docker run -d \
   -v /var/run/docker.sock:/var/run/docker.sock \
   ekristen/docker-event-bridge --consul-http-addr=10.10.10.10:8500 --consul-token=ABC123`
 ```
+
+## Credits
+
+Borrowed ideas from https://github.com/gliderlabs/registrator, thanks GliderLabs!
