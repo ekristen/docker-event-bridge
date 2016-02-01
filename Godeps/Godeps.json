@@ -1,0 +1,20 @@
+{
+	"ImportPath": "github.com/ekristen/consul-docker-event-bridge",
+	"GoVersion": "go1.5",
+	"Deps": [
+		{
+			"ImportPath": "github.com/codegangsta/cli",
+			"Comment": "1.2.0-137-gbca61c4",
+			"Rev": "bca61c476e3c752594983e4c9bcd5f62fb09f157"
+		},
+		{
+			"ImportPath": "github.com/fsouza/go-dockerclient",
+			"Rev": "0f5764b4d2f5b8928a05db1226a508817a9a01dd"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/consul/api",
+			"Comment": "v0.5.2-281-g6123507",
+			"Rev": "612350763923700aefcaa71537d5a7c0c4ad6a8c"
+		}
+	]
+}
