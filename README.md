@@ -23,6 +23,14 @@ docker run -d \
   ekristen/docker-event-bridge --consul-http-addr=10.10.10.10:8500 --consul-token=ABC123`
 ```
 
+## Building
+
+`make scripts/build.sh`
+
+By default only linux builds are made.
+
+You will need a local docker instance running that supports mounting in your host volume path into the container. If you are on OSX, this can be achieved using docker-machine (with virtualbox or vmware fusion). If you are on linux, and running a local docker daemon this is already supported.
+
 ## Credits
 
 Borrowed ideas from https://github.com/gliderlabs/registrator, thanks GliderLabs!

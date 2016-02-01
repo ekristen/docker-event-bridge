@@ -15,11 +15,11 @@ fi
 
 # Build Docker image unless we opt out of it
 if [[ -z "$SKIP_BUILD" ]]; then
-   docker build --rm=true --force-rm=true -t cdeb-builder -f Dockerfile.build .
+   docker build --rm=true --force-rm=true -t deb-builder -f Dockerfile.build .
 fi
 
 # Get rid of existing binaries
 rm -f *-386
 rm -f *-amd64
-rm -f dist/*
-docker run --rm -v `pwd`:/go/src/github.com/ekristen/consul-docker-event-bridge:Z cdeb-builder gox "${OS_PLATFORM_ARG[@]}" "${OS_ARCH_ARG[@]}" -output="dist/{{.Dir}}_{{.OS}}-{{.Arch}}" -ldflags="-w"
+rm -f release/*
+docker run --rm -v `pwd`:/go/src/github.com/ekristen/docker-event-bridge:Z deb-builder gox "${OS_PLATFORM_ARG[@]}" "${OS_ARCH_ARG[@]}" -output="release/{{.Dir}}_{{.OS}}-{{.Arch}}" -ldflags="-w"
