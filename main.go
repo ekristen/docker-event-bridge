@@ -117,9 +117,9 @@ func main() {
 
 	app.Name = "consul-docker-event-bridge"
 	app.Usage = "Send all docker events to consul"
-	app.Version = "1.0.0"
+	app.Version = "1.0.1"
 	app.Action = func(c *cli.Context) {
-		bridgeEvents(c.String("docker-socket"), c.String("consul-http-addr"), c.String("consul-token"), c.String("host"))
+		bridgeEvents(c.String("docker-socket"), c.String("consul-http-addr"), c.String("consul-token"), c.String("hostname"))
 	}
 
 	app.Run(os.Args)
