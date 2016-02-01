@@ -2,5 +2,5 @@ FROM scratch
 
 ENTRYPOINT ["/bridge"]
 
-COPY dist/consul-docker-event-bridge_linux-386 /bridge
+COPY dist/docker-event-bridge_linux-386 /bridge
 
