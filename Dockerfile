@@ -2,7 +2,7 @@ FROM lalyos/scratch-chmx
 
 ENTRYPOINT ["/bin/docker-event-bridge"]
 
-ENV VERSION v1.0.0
+ENV VERSION v1.0.1
 
 ADD https://github.com/ekristen/docker-event-bridge/releases/download/$VERSION/docker-event-bridge_linux-386 /bin/docker-event-bridge
 
